@@ -1,0 +1,22 @@
+{
+  "name": "alexa-1live-titel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "alexa",
+    "1live"
+  ],
+  "author": "Dirk Ecker",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.6"
+  }
+}

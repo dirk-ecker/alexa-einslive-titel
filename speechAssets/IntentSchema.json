@@ -1,0 +1,23 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "GetActualTitle",
+      "samples": [
+        "GetActualTitle einslive was läuft"
+      ],
+      "slots": []
+    }
+  ]
+}
