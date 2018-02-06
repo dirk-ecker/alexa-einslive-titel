@@ -7,7 +7,7 @@ const languageStrings = {
   'de-DE': {
     'translation': {
       'SKILL_NAME': '1live',
-      'INTRO_MESSAGE': 'Auf 1Live läuft gerade <break time="500ms"/>',
+      'INTRO_MESSAGE': 'Auf 1Live läuft gerade',
       'VON_MESSAGE': ' von ',
       'NOTHING_MESSAGE': ' kein Song.',
 
@@ -34,10 +34,9 @@ const handlers = {
 
   'GetActualTitle': function () {
     live1.actualTitle((song) => {
-      const speechOutput = song ?
-        this.t('INTRO_MESSAGE') + song.title + this.t('VON_MESSAGE') + song.artist + '.' :
-        this.t('NOTHING_MESSAGE');
-      this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), song.artist);
+      const content = song ? (song.title + this.t('VON_MESSAGE') + song.artist + '.') : this.t('NOTHING_MESSAGE');
+      const speechOutput = this.t('INTRO_MESSAGE') + ' <break time="500ms"/> ' + content;
+      this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), this.t('INTRO_MESSAGE') + content);
     });
   },
 
